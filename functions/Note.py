@@ -18,7 +18,5 @@ def moyenne():
 	somme = 0
 	with open('datas/note.txt','r') as file:
 		notes = file.read().split("\n")
-		for note in notes:
-			somme += int(note)
-		moyenne = somme / len(notes)
-		print(round(moyenne,2))
+		notes = [round(float(i),2) for i in notes if i != '']
+		return round(sum(notes)/len(notes),2)

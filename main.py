@@ -34,7 +34,7 @@ def actions(x):
 	elif x == "3":
 		Note.read()
 	elif x == "4":
-		Note.moyenne()
+		print("La moyenne est : {} ".format(Note.moyenne()))
 	elif x == "5":
 		print("Aurevoir !!!")
 		exit()
